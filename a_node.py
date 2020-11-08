@@ -52,7 +52,8 @@ file = open("file.txt")
 line = file.read().replace("\n", " ")
 file.close()
 
-print(line)
+line = crypt.add_padding_to_string(line)
+print(len(line))
 
 connToBJustSend = Client(addressAB, authkey=bytes('0101001', 'utf-8'))
 
